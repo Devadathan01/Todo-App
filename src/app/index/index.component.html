@@ -1,0 +1,47 @@
+
+<div class="container">
+    
+    <h4 style="color: rgb(25, 25, 24); text-align: center;">tasks to complete</h4> <br><br>
+    <button (click)="logout()" style="float: right; margin-top: -70px;"  class="btn btn-primary">logout</button>
+    
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-1"></div>
+         
+        <div class="col-4">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" #task placeholder="enter task"> 
+                <label for="floatingInput">enter task</label>
+            </div>
+        </div>
+    
+        <div class="col-3">
+            <button (click)="addtask(task.value)" style="margin-left: -20px; margin-top: 10px; border-radius: 30%;border-color: aliceblue;" ><img style="height:30px ; width: 30px;border-radius: 50%;" src="../../assets/plus - Copy.png" alt=""></button>  
+            </div>
+        <div class="col-3"></div>
+    </div>
+    
+    <div >
+        <ul *ngFor="let item of list">
+                  
+            <div class="row">
+             <div class="col-3"></div>
+        <div class="col-1"></div>
+             
+             <div class="col-3" id="utask"   style="width:400px;height:50px;background-color: rgb(213, 208, 208); border-radius: 10px;">
+                 <li type="none"> {{item.name}}</li> 
+             </div>
+     
+     
+             <div class="col-1">
+        <button (click)="removetask(item.id)" style="border-radius: 30%; margin-left: -30px; margin-top:8px ; border-color: aliceblue;"><img src="../../assets/delete.png" alt="" style=" width: 30px; height:30px; border-radius: 50%;" ></button>
+             </div>
+             <div class="col-4"></div>
+            </div>
+     
+     </ul>
+    </div>
+    
+    </div>
+    
+    
