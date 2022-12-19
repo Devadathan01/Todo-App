@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
   var mail=this.RegisterForm.value.email;
   var password=this.RegisterForm.value.pswd;
 
-  if(this.RegisterForm.value){
+  if(this.RegisterForm.valid){
 
     const result = this.ds.register(mail,password);
 
